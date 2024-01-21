@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Front-End Airbnb Clone with Next.js App Router: React, Tailwind, MapGL, GeoLib
+## Beautiful front page layout
+![](https://i.ibb.co/ns3mQRH/Screenshot-2024-01-21-at-04-29-24.png)
 
-## Getting Started
 
-First, run the development server:
+![](https://i.ibb.co/qksDz8P/Screenshot-2024-01-21-at-04-31-23.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Search Function
+![](https://i.ibb.co/zSbXkqn/Screenshot-2024-01-21-at-04-33-01.png)
+
+## Map and booking information
+![](https://i.ibb.co/cywsSY0/Screenshot-2024-01-21-at-04-33-51.png)
+
+
+This is a repository for a Front-End Airbnb Clone with Next.js App Router: React, Tailwind, MapGL, GeoLib
+
+
+Features:
+
+- Tailwind design
+- Tailwind animations and effects
+- Full responsiveness
+- Calendars with react-date-range
+- Page loading state
+- Pricing
+- Map with Map-GL
+- Shareable URL filters
+    - Lets say you select a category, location and date range, you will be able to share URL with a logged out friend in another browser and they will see the same results
+
+
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/Aaron-Cunningham/AirBnbClone.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Setup .env file
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```js
+MAPBOX_KEY=
+```
 
-## Learn More
+### Start the app
 
-To learn more about Next.js, take a look at the following resources:
+```shell
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Available commands
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Running commands with npm `npm run [command]`
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
