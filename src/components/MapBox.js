@@ -29,7 +29,7 @@ function MapBox({searchResults}) {
       mapStyle='mapbox://styles/aaronc991/clrmvyeaf001k01pg24u1a4az'
       {...viewState}
       onMove={evt => setViewState(evt.viewState)}
-      style={{width: "90%", height:'90%'}}
+      style={{width: "100%", height:'100%'}}
       
     >
       {searchResults?.map(item =>(
