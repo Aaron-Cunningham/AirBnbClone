@@ -1,6 +1,7 @@
 import React from 'react';
 import Map, {Marker} from 'react-map-gl';
 import { getCenter } from 'geolib';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 
@@ -28,6 +29,7 @@ function MapBox({searchResults}) {
       mapStyle='mapbox://styles/aaronc991/clrmvyeaf001k01pg24u1a4az'
       {...viewState}
       onMove={evt => setViewState(evt.viewState)}
+      style={{width: "90%", height:'90%'}}
       
     >
       {searchResults?.map(item =>(
