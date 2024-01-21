@@ -1,5 +1,5 @@
 import React from 'react';
-import Map, {Marker, Popup} from 'react-map-gl';
+import Map, {Marker} from 'react-map-gl';
 import { getCenter } from 'geolib';
 
 
@@ -35,7 +35,7 @@ function MapBox({searchResults}) {
           <Marker
           longitude={item.long}
           latitude={item.lat}
-          anchor='bottom'>
+          >
             <p className='cursor-pointer text-2xl'>📍</p>
           </Marker>
         </div>
