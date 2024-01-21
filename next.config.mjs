@@ -7,6 +7,9 @@ const nextConfig = {
       'i.imgur.com',
       'wallpapercave.com'
     ]
+  },
+  env:{
+    mapbox_key: process.env.MAPBOX_KEY
   }
 };
 
