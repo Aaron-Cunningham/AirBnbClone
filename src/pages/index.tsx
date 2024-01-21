@@ -3,6 +3,7 @@ import Banner from "../components/Banner"
 import SmallCard from "../components/SmallCard"
 import MediumCard from "../components/MediumCard"
 import LargeCard from "../components/LargeCard"
+import Footer from "../components/Footer"
 import React from "react";
 
 // @ts-ignore
@@ -45,6 +46,7 @@ export default function Home({ exploreData, cardsData }) {
               title="The Greatest Outdoors"
               buttonText={'Get Inspired'} description={undefined}          />
         </main>
+        <Footer/>
 
       </div>
 
