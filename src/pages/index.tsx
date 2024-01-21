@@ -10,7 +10,7 @@ import React from "react";
 export default function Home({ exploreData, cardsData }) {
   return (
       <div>
-        <Header/>
+        <Header placeholder={undefined}/>
         <Banner/>
         <main className="max-w-7xl mx-auto px-8 sm:px-16"> {/* configures spacing left and right */}
           <section className="pt-6">
