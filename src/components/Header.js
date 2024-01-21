@@ -6,14 +6,32 @@ import 'react-date-range/dist/theme/default.css';
 import 'react-date-range/dist/styles.css'
 
 import {DateRangePicker} from 'react-date-range'
+import { useRouter } from 'next/router';
 
-function Header() {
+function Header({placeholder}) {
     // Search bar input
     const [searchInput, setSearchInput] = useState('')
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date())
-
+    // Setting the guests numbers
     const [guests, setGuests] = useState(1)
+
+    // Importing the router
+    const router = useRouter()
+
+    // Redirect to search with the query
+    const search = () => {
+        router.push({
+            pathname: '/search',
+            query: {
+                location: searchInput,
+                startDate: startDate.toISOString(),
+                endDate: endDate.toISOString(),
+                guests,
+                
+            }
+        })
+    }
 
 
 
@@ -34,7 +52,7 @@ function Header() {
   return (
     <header className='sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10'>
         {/* left section */}
-        <div className='relative flex items-center h-10 cursor-pointer my-auto'>
+        <div onClick={() => router.push('/')} className='relative flex items-center h-10 cursor-pointer my-auto'>
 
             <Image 
             src={'https://links.papareact.com/qd3'}
@@ -52,7 +70,7 @@ function Header() {
             onChange={(e) => setSearchInput(e.target.value)} 
             className='pl-5 bg-transparent outline-none flex-grow text-sm text-gray-600 placeholder-gray-400' 
             type='text' 
-            placeholder='Start your search'/>
+            placeholder={placeholder || 'Start your search' }/>
 
             <SearchIcon className='hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer mx-auto md:mx-2' />
 
@@ -78,11 +96,11 @@ function Header() {
                 <div className='flex items-center border-b mb-4'>
                     <h2 className='text-2xl pl-2 flex-grow font-semibold'>Number of guests</h2>
                     <UserIcon className='h-5'/>
-                    <input type='number' className='w-12 pl-2 text-lg outline-none text-red-400' value={guests} onChange={(e) => setGuests('')} min={1}/>
+                    <input type='number' className='w-12 pl-2 text-lg outline-none text-red-400' value={guests} onChange={(e) => setGuests(e.target.value)} min={1}/>
                 </div>
                 <div className='flex justify-evenly'>
                     <button className='text-gray-500' onClick={(e) => setSearchInput(e.target.value)}>Cancel</button>
-                    <button className='text-red-400'>Search</button>
+                    <button className='text-red-400' onClick={search}>Search</button>
                 </div>
             </div>
         )}
